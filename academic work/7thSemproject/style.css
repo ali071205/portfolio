@@ -1,0 +1,255 @@
+/* =======================
+   Global Styles
+======================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+section {
+  padding: 50px 20px;
+  background: #fff;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3, h4 {
+  color: #2a4e6e;
+}
+
+a {
+  text-decoration: none;
+  color: #2a4e6e;
+}
+
+/* =======================
+   Header & Navbar
+======================= */
+header {
+  background: #2a4e6e;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 5px 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* =======================
+   Project Overview
+======================= */
+.project-overview {
+  text-align: center;
+  background: linear-gradient(135deg, #2a4e6e 0%, #4a7ba6 100%);
+  color: white;
+}
+
+.project-overview h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.project-overview h2 {
+  color: #e0e0e0;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.project-info {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.project-info p {
+  margin: 10px 0;
+}
+
+/* =======================
+   Floor Plans
+======================= */
+.floor-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #c0c0c0;
+}
+
+.tab-btn.active {
+  background: #2a4e6e;
+  color: white;
+}
+
+.floor-content {
+  display: none;
+}
+
+.floor-content.active {
+  display: block;
+}
+
+.plan-container {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.floor-details {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.floor-details h4 {
+  margin-top: 0;
+  color: #2a4e6e;
+}
+
+.floor-details ul {
+  padding-left: 20px;
+}
+
+/* =======================
+   Elevation & Site Plan
+======================= */
+.elevation-container,
+.siteplan-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* =======================
+   Design Details
+======================= */
+.design-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.detail-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2a4e6e;
+}
+
+.detail-card h3 {
+  margin-top: 0;
+  color: #2a4e6e;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2a4e6e;
+  color: white;
+}
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 30px 15px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  .project-overview h1 {
+    font-size: 2rem;
+  }
+  
+  .project-overview h2 {
+    font-size: 1.5rem;
+  }
+  
+  .floor-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 98%;
+    padding: 20px 10px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}

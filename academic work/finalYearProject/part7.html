@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Part 7 — Downloads & Contact</title>
+  <link rel="stylesheet" href="theses.css"/>
+</head>
+<body>
+  <header class="project-header">
+    <h1>River Front Resort</h1>
+    <p class="lead">Part 7 — DContact & Renderings</p>
+  </header>
+  <nav class="primary"><div class="nav-row">
+    <a href="part1.html">Concept</a><a href="part2.html">Site</a><a href="part3.html">Accommodations</a>
+    <a href="part4.html">Wellness</a><a href="part5.html">Architecture</a><a href="part6.html">Journal</a><a href="part7.html">Downloads</a>
+  </div></nav>
+
+  <main>
+    <section class="content-section">
+      <h2>Downloads</h2>
+      <div class="project-info">
+        <article class="info-card">
+          <h3>Thesis Sheets (PDF)</h3>
+          <p class="muted">Optimized for viewing and print.</p>
+          <p><a class="nav-btn" href="/academic work/finalYearProject/pdf/FINAL X-SEM THESIS SHEETS.pdf" download>Download PDF</a></p>
+        </article>
+      </div>
+
+      <div class="hr"></div>
+      <div class="hr"></div>
+
+      <h2>3D Renderings</h2>
+      <div class="render-frame">
+        <button class="frame-btn frame-prev" id="framePrev">‹</button>
+        <img id="frameImage" src="/academic work/finalYearProject/thesesImg/1.jpg", alt="3D Rendering" style="max-width:100%;border-radius:8px"/>
+        <button class="frame-btn frame-next" id="frameNext">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> River Front Resort</footer>
+<script>
+(function () {
+  const frameImg = document.getElementById("frameImage");
+  const btnPrev = document.getElementById("framePrev");
+  const btnNext = document.getElementById("frameNext");
+
+  const images = [
+    "/academic work/finalYearProject/thesesImg/1.jpg",
+    "/academic work/finalYearProject/thesesImg/2.jpg",
+    "/academic work/finalYearProject/thesesImg/3.jpg",
+    "/academic work/finalYearProject/thesesImg/4.jpg",
+    "/academic work/finalYearProject/thesesImg/5.jpg",
+    "/academic work/finalYearProject/thesesImg/6.jpg",
+    "/academic work/finalYearProject/thesesImg/7.jpg",
+    "/academic work/finalYearProject/thesesImg/8.jpg",
+    "/academic work/finalYearProject/thesesImg/9.jpg",
+    "/academic work/finalYearProject/thesesImg/10.jpg",
+    "/academic work/finalYearProject/thesesImg/11.jpg",
+    "/academic work/finalYearProject/thesesImg/12.jpg",
+    "/academic work/finalYearProject/thesesImg/13.jpg",
+    "/academic work/finalYearProject/thesesImg/14.jpg",
+    "/academic work/finalYearProject/thesesImg/15.jpg",
+    "/academic work/finalYearProject/thesesImg/16.jpg",
+    "/academic work/finalYearProject/thesesImg/17.jpg",
+    "/academic work/finalYearProject/thesesImg/18.jpg",
+  ];
+
+  let index = 0;
+
+  function showFrame(i) {
+    index = (i + images.length) % images.length;
+    frameImg.src = images[index];
+    frameImg.alt = `Image ${index + 1}`;
+  }
+
+  btnPrev.addEventListener("click", () => showFrame(index - 1));
+  btnNext.addEventListener("click", () => showFrame(index + 1));
+
+  // Swipe navigation
+  let startX = 0;
+  frameImg.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  frameImg.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) {
+      showFrame(index + 1);
+    } else if (endX - startX > 50) {
+      showFrame(index - 1);
+    }
+  });
+
+  // Default image
+  showFrame(0);
+})();
+</script>
+
+
+</body>
+</html>

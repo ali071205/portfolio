@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Design Project | S.M Faizan Khalid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#floors">Floor Plans</a></li>
+        <li><a href="#elevation">Elevation</a></li>
+        <li><a href="#siteplan">Site Plan</a></li>
+        <li><a href="#details">Design Details</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Project Overview -->
+    
+  <!-- Floor Plans -->
+  <section id="floors">
+    <h2>Floor Plans</h2>
+    <div class="floor-plans">
+      <div class="floor-tabs">
+        <button class="tab-btn active" onclick="openFloor('ground')">Ground Floor</button>
+        <button class="tab-btn" onclick="openFloor('first')">First Floor</button>
+        <button class="tab-btn" onclick="openFloor('second')">Second Floor</button>
+      </div>
+      
+      <div id="ground" class="floor-content active">
+        <h3>Ground Floor Plan</h3>
+        <div class="plan-container">
+          <iframe src="HOSPITAL DESIGN 7Tth Semestergroundf-Model.pdf" width="100%" height="600px"></iframe>
+        </div>
+        <div class="floor-details">
+          <h4>Key Areas:</h4>
+          <ul>
+            <li>Reception & Waiting Area</li>
+            <li>OPD (Outpatient Department)</li>
+            <li>Emergency Ward</li>
+            <li>General Wards</li>
+            <li>Diagnostic Areas (X-ray, Sonography, Pathology)</li>
+            <li>Staff Rooms & Pharmacy</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="first" class="floor-content">
+        <h3>First Floor Plan</h3>
+        <div class="plan-container">
+          <iframe src="HOSPITAL DESIGN 7Tth Semesterfirstf-Model.pdf" width="100%" height="600px"></iframe>
+        </div>
+        <div class="floor-details">
+          <h4>Key Areas:</h4>
+          <ul>
+            <li>Cardiac Ward</li>
+            <li>ENT Ward</li>
+            <li>Orthopedic Ward</li>
+            <li>Gynec Ward</li>
+            <li>Nurse Station</li>
+            <li>Doctor Cabins</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="second" class="floor-content">
+        <h3>Second Floor Plan</h3>
+        <div class="plan-container">
+          <iframe src="HOSPITAL DESIGN 7Tth Semestersecondf-Model.pdf" width="100%" height="600px"></iframe>
+        </div>
+        <div class="floor-details">
+          <h4>Key Areas:</h4>
+          <ul>
+            <li>Cardiac Operation Theaters</li>
+            <li>Gynec Operation Theaters</li>
+            <li>General Operation Theater</li>
+            <li>ICU (Intensive Care Unit)</li>
+            <li>Private & Semi-Private Rooms</li>
+            <li>Clean Utility & Disposal Areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Elevation -->
+  <section id="elevation">
+    <h2>Building Elevation</h2>
+    <div class="elevation-container">
+      <iframe src="HOSPITAL DESIGN 7Tth Semesterelevation-Model.pdf" width="100%" height="600px"></iframe>
+    </div>
+  </section>
+  
+  <!-- Site Plan -->
+  <section id="siteplan">
+    <h2>Site Plan</h2>
+    <div class="siteplan-container">
+      <iframe src="HOSPITAL DESIGN 7Tth Semestersiteplan-Model.pdf" width="100%" height="600px"></iframe>
+    </div>
+  </section>
+  
+  <!-- Design Details -->
+  <section id="details">
+    <h2>Design Details</h2>
+    <div class="design-details">
+      <div class="detail-card">
+        <h3>Project Notes</h3>
+        <ul>
+          <li>All dimensions are in millimeters (mm)</li>
+          <li>Only written dimensions should be followed</li>
+          <li>For size of structural members, refer structural drawings</li>
+          <li>In case of any disparity, contact architect</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h3>Technical Specifications</h3>
+        <ul>
+          <li>Total Built-up Area: Approximately 5,000 sqm</li>
+          <li>Floor-to-Floor Height: 3.5 meters</li>
+          <li>Structure: RCC Framed Structure</li>
+          <li>Materials: Concrete, Glass, Steel, and Stone Cladding</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>© 2025 | Hospital Design Project by S.M Faizan Khalid | Institute of Architecture, Sage University</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
