@@ -2,9 +2,6 @@ function showVersion(version) {
   const display = document.getElementById("gallery-display");
   let files = [];
 
-  // Select PDFs based on version
-  if (version === "row1") files = ["../pdf_section/row_house1day.pdf", "../pdf_section/row_house1night.pdf"];
-  if (version === "row2") files = ["../pdf_section/row_house2_day.pdf", "../pdf_section/row_house2_night.pdf"];
 
   // Load PDFs (single or dual)
   if (files.length === 1) {
@@ -24,3 +21,4 @@ function showVersion(version) {
   const clickedBtn = document.querySelector(`[onclick="showVersion('${version}')"]`);
   clickedBtn.classList.add("active");
 }
+
