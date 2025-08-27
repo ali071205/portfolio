@@ -1,12 +1,12 @@
 function showVersion(version) {
   const pdfMap = {
     'row1': [
-      '/self_project/pdf_section/row_house1day.pdf',
-      '/self_project/pdf_section/row_house1night.pdf'
+      'self_project/pdf_section/row_house1day.pdf',
+      'self_project/pdf_section/row_house1night.pdf'
     ],
     'row2': [
-      '/self_project/pdf_section/row_house2_day.pdf',
-      '/self_project/pdf_section/row_house2_night.pdf'
+      'self_project/pdf_section/row_house2_day.pdf',
+      'self_project/pdf_section/row_house2_night.pdf'
     ]
     // Add more versions if needed
   };
